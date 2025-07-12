@@ -1,0 +1,29 @@
+{
+  "name": "fastify-api",
+  "version": "1.0.0",
+  "description": "A modern TypeScript backend API TODO application built with Fastify",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "db:push": "turbo run db:push",
+    "db:studio": "turbo run db:studio",
+    "db:setup": "tsx scripts/setup-db.ts",
+    "db:reset": "tsx scripts/setup-db.ts reset",
+    "db:seed": "tsx scripts/setup-db.ts seed",
+    "db:check": "tsx scripts/setup-db.ts check",
+    "db:status": "tsx scripts/setup-db.ts status"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.0",
+    "tsx": "^4.7.0"
+  },
+  "dependencies": {
+    "postgres": "^3.4.3"
+  }
+}
